@@ -1,0 +1,546 @@
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: #141414;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent-color: #cbef43;
+    --border-color: #222222;
+    --font-main: 'Segoe UI', Inter, system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 0 6%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.navbar .logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding-bottom: 80px;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #000;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.04);
+}
+
+.btn-primary .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.social-icon {
+    color: var(--text-color);
+    background-color: #161616;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+
+.hero-image {
+    width: 300px;           /* Taille fixe plus petite pour l'image du haut */
+    height: 300px;          /* Même hauteur pour un carré parfait */
+    background-color: #282828;
+    border-radius: 16px;    /* Coins arrondis style moderne */
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Recadre proprement la photo dans le carré */
+    display: block;
+}
+.projects-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.projects-section h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 70px;
+}
+
+.project-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    border: 1px solid var(--border-color);
+}
+
+.project-img-container {
+    flex: 1;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.project-img-container img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.project-info {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+.project-details {
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+    margin-bottom: 35px;
+}
+
+.project-details h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.detail-row span:last-child {
+    color: var(--text-muted);
+}
+
+.project-links {
+    display: flex;
+    gap: 25px;
+}
+
+.link-btn {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.link-btn:hover {
+    color: var(--accent-color);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-header {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.about-header h2 {
+    flex: 1;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.about-intro {
+    flex: 2;
+}
+
+.about-intro h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.about-intro p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.underline-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 4px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.about-visuals {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.about-img-box {
+    width: 350px;
+    height: 350px;
+    background-color: #282828;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.about-img-box img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+..section-title-left {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+.section-title-left h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center !important;
+}
+
+.skills-content, 
+.experience-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.skills-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tag {
+    border: 1px solid var(--border-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.exp-item {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.exp-date {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.exp-company {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 5px 0 15px 0;
+}
+
+.exp-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 50px;
+}
+
+.footer-left h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.footer-left p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.email-link {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.cv-link {
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-socials {
+    margin-top: 40px;
+}
+
+.footer-socials a {
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    margin-right: 25px;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--accent-color);
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 350px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 14px;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+@media (max-width: 968px) {
+    body { padding: 0 4%; }
+    .hero { flex-direction: column-reverse; text-align: center; }
+    .hero-content { max-width: 100%; }
+    .hero-content p { margin: 0 auto 35px auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-image { width: 68%; }
+    .project-card { flex-direction: column; }
+    .about-header { flex-direction: column; text-align: center; }
+    .about-img-box { width: 100%; }
+    
+    .skills-section {
+    display: flex;
+    flex-direction: column;   /* Force le titre à se mettre AU-DESSUS du texte */
+    align-items: center;      /* Centre tout au milieu de l'écran */
+    text-align: center;       /* Centre le texte et les badges */
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;   /* Force le titre à se mettre AU-DESSUS des expériences */
+    align-items: center;      /* Centre les blocs d'expérience au milieu */
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title-left {
+    margin-bottom: 40px;      /* Ajoute de l'espace sous le titre principal */
+    text-align: center;       /* Force le titre à se centrer */
+    width: 100%;
+}/* Force les conteneurs de titres à occuper toute la largeur et à se centrer */
+.section-title-left {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+}
